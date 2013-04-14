@@ -23,3 +23,10 @@ func TestSum(t *testing.T) {
 		}
 	}
 }
+
+// You can run this benchmark using "go test -test.bench Sum"
+func BenchmarkSum(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Sum(1, 3)
+	}
+}
